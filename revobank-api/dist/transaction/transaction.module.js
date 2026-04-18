@@ -10,13 +10,15 @@ exports.TransactionModule = void 0;
 const common_1 = require("@nestjs/common");
 const transaction_service_1 = require("./transaction.service");
 const transaction_controller_1 = require("./transaction.controller");
+const prisma_module_1 = require("../prisma/prisma.module");
 let TransactionModule = class TransactionModule {
 };
 exports.TransactionModule = TransactionModule;
 exports.TransactionModule = TransactionModule = __decorate([
     (0, common_1.Module)({
+        imports: [prisma_module_1.PrismaModule],
+        controllers: [transaction_controller_1.TransactionController],
         providers: [transaction_service_1.TransactionService],
-        controllers: [transaction_controller_1.TransactionController]
     })
 ], TransactionModule);
 //# sourceMappingURL=transaction.module.js.map
