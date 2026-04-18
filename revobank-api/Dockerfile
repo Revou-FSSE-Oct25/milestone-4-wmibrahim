@@ -1,5 +1,7 @@
-# Build date: 2026-04-18-v4
+# Build date: 2026-04-18-v5
 FROM node:20.18-alpine
+
+RUN apk add --no-cache openssl openssl-dev
 
 WORKDIR /app
 
