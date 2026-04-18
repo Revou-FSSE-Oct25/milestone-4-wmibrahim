@@ -12,7 +12,7 @@ RUN npx prisma generate
 
 COPY . .
 
-RUN npm run build && ls -la dist && ls -la dist/auth
+RUN rm -rf dist && npm run build && ls -la dist
 
 EXPOSE 3000
 
