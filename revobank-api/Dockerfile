@@ -3,6 +3,8 @@ FROM node:20.18-alpine
 WORKDIR /app
 
 COPY package*.json ./
+COPY tsconfig*.json ./
+COPY nest-cli.json ./
 
 RUN npm install
 
