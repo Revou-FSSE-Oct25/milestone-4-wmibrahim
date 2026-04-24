@@ -1,10 +1,10 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/PzCCy7VV)
-
 # 🏦 RevoBank API
 
 A RESTful Banking API built with TypeScript as part of **RevoU Full Stack Software Engineering (FSSE) Milestone 4**.
 
-🚀 **Live Demo:** [https://railway.com/project/07120e72-1136-4a58-82d6-8ddbe3c4fcae](https://railway.com/project/07120e72-1136-4a58-82d6-8ddbe3c4fcae)
+🚀 **Live Demo:** [https://milestone-4-wmibrahim-production.up.railway.app/api#/](https://milestone-4-wmibrahim-production.up.railway.app/api#/)
+
+📄 **API Documentation (Swagger):** [https://milestone-4-wmibrahim-production.up.railway.app/api#/](https://milestone-4-wmibrahim-production.up.railway.app/api#/)
 
 ---
 
@@ -181,7 +181,7 @@ This project is deployed on **[Railway](https://railway.com/project/07120e72-113
 ### Stack
 | Service  | Platform |
 |----------|----------|
-| API Host | [Railway](https://railway.com/project/07120e72-1136-4a58-82d6-8ddbe3c4fcae) |
+| API Host | [Railway](https://milestone-4-wmibrahim-production.up.railway.app/api#/) |
 | Database | [Supabase](https://supabase.com/dashboard/org/fkjvmaitnucdwpzbvohv) |
 
 ### Deploy to Railway
