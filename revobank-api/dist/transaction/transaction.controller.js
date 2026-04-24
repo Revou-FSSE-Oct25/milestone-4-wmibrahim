@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TransactionController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
 const transaction_service_1 = require("./transaction.service");
 const transaction_dto_1 = require("./dto/transaction.dto");
 const jwt_auth_guard_1 = require("../common/guards/jwt-auth.guard");
@@ -39,6 +40,7 @@ let TransactionController = class TransactionController {
 };
 exports.TransactionController = TransactionController;
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Deposit to account' }),
     (0, common_1.Post)('deposit'),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Body)()),
@@ -47,6 +49,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], TransactionController.prototype, "deposit", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Withdraw from account' }),
     (0, common_1.Post)('withdraw'),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Body)()),
@@ -55,6 +58,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], TransactionController.prototype, "withdraw", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Transfer between accounts' }),
     (0, common_1.Post)('transfer'),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Body)()),
@@ -63,6 +67,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], TransactionController.prototype, "transfer", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'List all transactions' }),
     (0, common_1.Get)(),
     __param(0, (0, common_1.Request)()),
     __metadata("design:type", Function),
@@ -70,6 +75,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], TransactionController.prototype, "findAll", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Get transaction by id' }),
     (0, common_1.Get)(':id'),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Param)('id')),
@@ -78,6 +84,8 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], TransactionController.prototype, "findOne", null);
 exports.TransactionController = TransactionController = __decorate([
+    (0, swagger_1.ApiTags)('Transactions'),
+    (0, swagger_1.ApiBearerAuth)(),
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
     (0, common_1.Controller)('transactions'),
     __metadata("design:paramtypes", [transaction_service_1.TransactionService])

@@ -6,45 +6,45 @@ export declare class TransactionController {
     deposit(req: any, dto: DepositDto): Promise<{
         id: string;
         createdAt: Date;
+        description: string | null;
         type: import(".prisma/client").$Enums.TransactionType;
         amount: number;
-        description: string | null;
         fromAccountId: string | null;
         toAccountId: string | null;
     }>;
     withdraw(req: any, dto: WithdrawDto): Promise<{
         id: string;
         createdAt: Date;
+        description: string | null;
         type: import(".prisma/client").$Enums.TransactionType;
         amount: number;
-        description: string | null;
         fromAccountId: string | null;
         toAccountId: string | null;
     }>;
     transfer(req: any, dto: TransferDto): Promise<{
         id: string;
         createdAt: Date;
+        description: string | null;
         type: import(".prisma/client").$Enums.TransactionType;
         amount: number;
-        description: string | null;
         fromAccountId: string | null;
         toAccountId: string | null;
     }>;
     findAll(req: any): Promise<{
         id: string;
         createdAt: Date;
+        description: string | null;
         type: import(".prisma/client").$Enums.TransactionType;
         amount: number;
-        description: string | null;
         fromAccountId: string | null;
         toAccountId: string | null;
     }[]>;
     findOne(req: any, id: string): Promise<{
         id: string;
         createdAt: Date;
+        description: string | null;
         type: import(".prisma/client").$Enums.TransactionType;
         amount: number;
-        description: string | null;
         fromAccountId: string | null;
         toAccountId: string | null;
     }>;
