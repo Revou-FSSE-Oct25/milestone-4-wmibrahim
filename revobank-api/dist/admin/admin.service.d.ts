@@ -3,17 +3,17 @@ export declare class AdminService {
     private prisma;
     constructor(prisma: PrismaService);
     findAllUsers(): Promise<{
-        name: string;
-        email: string;
         id: string;
+        email: string;
+        name: string;
         role: import(".prisma/client").$Enums.Role;
         createdAt: Date;
         updatedAt: Date;
     }[]>;
     findOneUser(userId: string): Promise<{
-        name: string;
-        email: string;
         id: string;
+        email: string;
+        name: string;
         role: import(".prisma/client").$Enums.Role;
         createdAt: Date;
         updatedAt: Date;
@@ -21,33 +21,33 @@ export declare class AdminService {
             id: string;
             createdAt: Date;
             updatedAt: Date;
-            type: import(".prisma/client").$Enums.AccountType;
             accountNumber: string;
             balance: number;
+            type: import(".prisma/client").$Enums.AccountType;
             userId: string;
         }[];
     } | null>;
     findAllAccounts(): Promise<({
         user: {
-            name: string;
-            email: string;
             id: string;
+            email: string;
+            name: string;
         };
     } & {
         id: string;
         createdAt: Date;
         updatedAt: Date;
-        type: import(".prisma/client").$Enums.AccountType;
         accountNumber: string;
         balance: number;
+        type: import(".prisma/client").$Enums.AccountType;
         userId: string;
     })[]>;
     findAllTransactions(): Promise<{
         id: string;
         createdAt: Date;
-        description: string | null;
         type: import(".prisma/client").$Enums.TransactionType;
         amount: number;
+        description: string | null;
         fromAccountId: string | null;
         toAccountId: string | null;
     }[]>;
