@@ -8,36 +8,36 @@ export declare class AccountController {
         id: string;
         createdAt: Date;
         updatedAt: Date;
-        type: import(".prisma/client").$Enums.AccountType;
         accountNumber: string;
         balance: number;
+        type: import(".prisma/client").$Enums.AccountType;
         userId: string;
     }>;
     findAll(req: any): Promise<{
         id: string;
         createdAt: Date;
         updatedAt: Date;
-        type: import(".prisma/client").$Enums.AccountType;
         accountNumber: string;
         balance: number;
+        type: import(".prisma/client").$Enums.AccountType;
         userId: string;
     }[]>;
     findOne(req: any, id: string): Promise<{
         id: string;
         createdAt: Date;
         updatedAt: Date;
-        type: import(".prisma/client").$Enums.AccountType;
         accountNumber: string;
         balance: number;
+        type: import(".prisma/client").$Enums.AccountType;
         userId: string;
     }>;
     update(req: any, id: string, dto: UpdateAccountDto): Promise<{
         id: string;
         createdAt: Date;
         updatedAt: Date;
-        type: import(".prisma/client").$Enums.AccountType;
         accountNumber: string;
         balance: number;
+        type: import(".prisma/client").$Enums.AccountType;
         userId: string;
     }>;
     remove(req: any, id: string): Promise<{
