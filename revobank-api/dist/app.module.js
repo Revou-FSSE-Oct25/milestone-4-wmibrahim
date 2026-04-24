@@ -13,6 +13,7 @@ const auth_module_1 = require("./auth/auth.module");
 const user_module_1 = require("./user/user.module");
 const account_module_1 = require("./account/account.module");
 const transaction_module_1 = require("./transaction/transaction.module");
+const admin_module_1 = require("./admin/admin.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -24,6 +25,7 @@ exports.AppModule = AppModule = __decorate([
             user_module_1.UserModule,
             account_module_1.AccountModule,
             transaction_module_1.TransactionModule,
+            admin_module_1.AdminModule,
         ],
     })
 ], AppModule);
