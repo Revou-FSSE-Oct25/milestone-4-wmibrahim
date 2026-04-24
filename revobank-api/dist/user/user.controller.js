@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
 const user_service_1 = require("./user.service");
 const update_user_dto_1 = require("./dto/update-user.dto");
 const jwt_auth_guard_1 = require("../common/guards/jwt-auth.guard");
@@ -30,6 +31,7 @@ let UserController = class UserController {
 };
 exports.UserController = UserController;
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Get user profile' }),
     (0, common_1.Get)('profile'),
     __param(0, (0, common_1.Request)()),
     __metadata("design:type", Function),
@@ -37,6 +39,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "getProfile", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Update user profile' }),
     (0, common_1.Patch)('profile'),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Body)()),
@@ -45,6 +48,8 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "updateProfile", null);
 exports.UserController = UserController = __decorate([
+    (0, swagger_1.ApiTags)('User'),
+    (0, swagger_1.ApiBearerAuth)(),
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
     (0, common_1.Controller)('user'),
     __metadata("design:paramtypes", [user_service_1.UserService])

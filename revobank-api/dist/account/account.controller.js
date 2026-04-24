@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
 const account_service_1 = require("./account.service");
 const create_account_dto_1 = require("./dto/create-account.dto");
 const update_account_dto_1 = require("./dto/update-account.dto");
@@ -40,6 +41,7 @@ let AccountController = class AccountController {
 };
 exports.AccountController = AccountController;
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Create bank account' }),
     (0, common_1.Post)(),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Body)()),
@@ -48,6 +50,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AccountController.prototype, "create", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'List all user accounts' }),
     (0, common_1.Get)(),
     __param(0, (0, common_1.Request)()),
     __metadata("design:type", Function),
@@ -55,6 +58,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AccountController.prototype, "findAll", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Get account by id' }),
     (0, common_1.Get)(':id'),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Param)('id')),
@@ -63,6 +67,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AccountController.prototype, "findOne", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Update account' }),
     (0, common_1.Patch)(':id'),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Param)('id')),
@@ -72,6 +77,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AccountController.prototype, "update", null);
 __decorate([
+    (0, swagger_1.ApiOperation)({ summary: 'Delete account' }),
     (0, common_1.Delete)(':id'),
     __param(0, (0, common_1.Request)()),
     __param(1, (0, common_1.Param)('id')),
@@ -80,6 +86,8 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AccountController.prototype, "remove", null);
 exports.AccountController = AccountController = __decorate([
+    (0, swagger_1.ApiTags)('Accounts'),
+    (0, swagger_1.ApiBearerAuth)(),
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
     (0, common_1.Controller)('accounts'),
     __metadata("design:paramtypes", [account_service_1.AccountService])
